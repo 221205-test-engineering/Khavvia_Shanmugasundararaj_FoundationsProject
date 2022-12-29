@@ -10,8 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/dev/khavvia/features/LoginPositive.feature", glue = "dev.khavvia.steps")
-public class LoginPositiveRunner {
+@CucumberOptions(features = "src/test/java/dev/khavvia/features/login", glue = "dev.khavvia.steps")
+public class LoginRunner {
     public static WebDriver driver;
 
     @BeforeClass

@@ -1,18 +1,19 @@
 package dev.khavvia.steps;
 
+import dev.khavvia.runners.ReportDefectPositiveRunner;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
 
 public class ReportDefectPositiveStepImpl {
+    public WebDriver driver = ReportDefectPositiveRunner.driver;
     @Given("The employee is on the Defect Reporter Page")
     public void the_employee_is_on_the_defect_reporter_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        driver.get("https://bugcatcher-dan.coe.revaturelabs.com/defectreporter");
     }
     @When("The employee selects todays date")
     public void the_employee_selects_todays_date() {
-        // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
     @When("The employee types in Description with")

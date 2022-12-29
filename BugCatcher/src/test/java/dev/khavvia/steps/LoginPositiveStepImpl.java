@@ -1,6 +1,6 @@
 package dev.khavvia.steps;
 
-import dev.khavvia.runners.LoginPositiveRunner;
+import dev.khavvia.runners.LoginRunner;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import static org.junit.Assert.assertEquals;
 
 public class LoginPositiveStepImpl {
-    public static WebDriver driver = LoginPositiveRunner.driver;
+    public static WebDriver driver = LoginRunner.driver;
     @Given("The employee is on the login page")
     public void the_employee_is_on_the_login_page() {
         driver.get("https://bugcatcher-dan.coe.revaturelabs.com/?dev=21");
