@@ -27,9 +27,10 @@ public class LoginPositiveStepImpl {
         password_field.sendKeys("chomp!");
     }
     @When("The employee clicks on the login button")
-    public void the_employee_clicks_on_the_login_button() {
+    public void the_employee_clicks_on_the_login_button() throws InterruptedException{
         WebElement button = driver.findElement(By.xpath("//button"));
         button.click();
+        Thread.sleep(2000);
     }
     @Then("the employee should be on the {string} page")
     public void the_employee_should_be_on_the_page(String string) {
@@ -37,7 +38,7 @@ public class LoginPositiveStepImpl {
     }
     @Then("The employee should see their name {string} {string} on the home page")
     public void the_employee_should_see_their_name_on_the_home_page(String string, String string2) {
-        assertEquals("Patty Pastiche", driver.findElement(By.xpath("//p")).getText());
+        assertEquals("Patty Pastiche", driver.findElement(By.xpath("//p")).getText().substring(8));
     }
 
 }
