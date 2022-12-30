@@ -10,18 +10,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/dev/khavvia/features/ReportDefectPositive.feature", glue = "dev.khavvia.steps")
-public class ReportDefectPositiveRunner {
-    public static WebDriver driver;
+@CucumberOptions(features = "src/test/java/dev/khavvia/features", glue = "dev.khavvia.steps")
+public class DefectRunner {
+    public static WebDriver defect_driver;
 
     @BeforeClass
     public static void setup(){
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        defect_driver = new ChromeDriver();
     }
 
     @AfterClass
     public static void teardown(){
-        driver.quit();
+        defect_driver.quit();
     }
 }

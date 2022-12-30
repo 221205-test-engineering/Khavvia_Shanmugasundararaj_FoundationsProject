@@ -13,9 +13,9 @@ import static org.junit.Assert.assertEquals;
 /****** NOT FINISHED *********/
 
 public class AssignDefectStepImpl {
-    public static WebDriver driver = DefectRunner.driver;
+    public static WebDriver driver = DefectRunner.defect_driver;
     @Given("The manager is logged in as a manager")
-    public void the_manager_is_logged_in_as_a_manager() {
+    public void the_manager_is_logged_in_as_a_manager() throws InterruptedException {
         driver.get("https://bugcatcher-dan.coe.revaturelabs.com/?dev=21");
         // log in
         WebElement username_field = driver.findElement(By.name("username"));
