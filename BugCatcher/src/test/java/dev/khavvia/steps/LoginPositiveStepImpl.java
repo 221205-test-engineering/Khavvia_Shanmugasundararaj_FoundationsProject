@@ -30,7 +30,7 @@ public class LoginPositiveStepImpl {
     public void the_employee_clicks_on_the_login_button() throws InterruptedException{
         WebElement button = driver.findElement(By.xpath("//button"));
         button.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
     @Then("the employee should be on the {string} page")
     public void the_employee_should_be_on_the_page(String string) {
